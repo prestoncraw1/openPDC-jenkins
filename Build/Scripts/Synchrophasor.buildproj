@@ -54,6 +54,7 @@
     <PropertyGroup>
       <!-- Must-override settings. -->
       <ProjectName>Synchrophasor</ProjectName>
+	  <LocalFolder Condition="'$(LocalFolder)' == ''">C:\test\openPDC</LocalFolder>
       <ProjectSolution>$(LocalFolder)\Source\$(ProjectName).sln</ProjectSolution>
       
       <VersionMajorChange>None</VersionMajorChange>
@@ -62,7 +63,7 @@
       <VersionRevisionChange>Reset</VersionRevisionChange>
 
       <!-- Override default settings. -->
-      <GitServer Condition="'$(GitServer)' == ''">git@github.com:GridProtectionAlliance/openPDC.git</GitServer>
+      <GitServer Condition="'$(GitServer)' == ''">https://github.com/prestoncraw1/openPDC-jenkins.git</GitServer>
       <BuildFlavor Condition="'$(BuildFlavor)' == ''">Deploy</BuildFlavor>
       <BuildOutputFolder Condition="'$(BuildOutputFolder)' == ''">$(LocalFolder)\Build\Output\Release</BuildOutputFolder>
     </PropertyGroup>
